@@ -1,3 +1,6 @@
+//Método de transformación de un esquema entidad-relación en una base de datos con MongoDB.
+//@author - Rubén de Diego Varona
+// Script capítulo 4
 // Creamos la base de datos
 use TfgCapítulo4
 db.createCollection("Clientes")
