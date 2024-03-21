@@ -1,4 +1,8 @@
-use 20_03
+//Método de transformación de un esquema entidad-relación en una base de datos con MongoDB.
+//@author - Rubén de Diego Varona
+// Script capítulo 5
+// Creamos la base de datos
+use TfgCapítulo5
 // Creación colección Películas
 db.createCollection("Películas", {
    validator: {
