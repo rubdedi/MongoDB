@@ -660,3 +660,51 @@ Estudiante2 = ""+Estudiante2['_id']
 //Referenciamos mentor/aprendiz
 db.Estudiantes.updateOne({"Número_estudiante": 321261},{$set:{"Aprendiz":ObjectId(Estudiante2)}})
 db.Estudiantes.updateOne({"Número_estudiante": 321262},{$set:{"Mentor":ObjectId(Estudiante1)}})
+
+// Ejemplo agregación
+// Creamos la colección Alumno, profesor y TFG
+db.createCollection("Alumno")
+db.createCollection("Profesor")
+db.createCollection("TFG")
+
+// Añadimos instancia alumno
+db.Alumno.insertOne(
+{
+    	"Número_alumno": 321261,
+	"Nombre": "Miguel Ángel"
+ }
+)
+// Añadimos instancia profesor
+db.Profesor.insertOne(
+{
+    	"Número_profesor": 987321,
+	"Nombre": "Henar"
+ }
+)
+
+// Añadimos instancia TFG
+db.TFG.insertOne(
+{
+    	"Número_TFG": 159267,
+	"Nombre": "Método de transformación"
+ }
+)
+
+// Obtenemos el id de alumno
+Alumno = db.Alumno.findOne({ "Número_alumno": 321261 }, { '_id': 1 } )
+Alumno['_id'].toString
+Alumno = ""+Alumno['_id']
+
+// Obtenemos el id de profesor
+Profesor = db.Profesor.findOne({ "Número_profesor": 987321 }, { '_id': 1 } )
+Profesor['_id'].toString
+Profesor = ""+Profesor['_id']
+
+// Obtenemos el id de Tfg
+Tfg = db.TFG.findOne({ "Número_TFG": 159267 }, { '_id': 1 } )
+Tfg['_id'].toString
+Tfg = ""+Tfg['_id']
+
+//Referenciamos el tfg con el alumno y el profesor
+db.TFG.updateOne({"Número_TFG": 159267},{$set:{"Alumno":ObjectId(Alumno)}})
+db.TFG.updateOne({"Número_TFG": 159267},{$set:{"Profesor":ObjectId(Profesor)}})
