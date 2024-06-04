@@ -1347,47 +1347,38 @@ db.Géneros.insertOne(
 //Obtenemos el valor de los IDs de todas las instancias introducidas
 
 Medio1 = db.Medios.findOne({ 'Número_medio': 1 }, { '_id': 1 } )
-Medio1['_id']
 Medio1['_id'].toString
 Medio1 = ""+Medio1['_id']
 
 Medio3 = db.Medios.findOne({ 'Número_medio': 15 }, { '_id': 1 } )
-Medio3['_id']
 Medio3['_id'].toString
 Medio3 = ""+Medio3['_id']
 
 Medio3 = db.Medios.findOne({ 'Número_medio': 3 }, { '_id': 1 } )
-Medio3['_id']
 Medio3['_id'].toString
 Medio3 = ""+Medio3['_id']
 
 Medio4 = db.Medios.findOne({ 'Número_medio': 4 }, { '_id': 1 } )
-Medio4['_id']
 Medio4['_id'].toString
 Medio4 = ""+Medio4['_id']
 
 Medio5 = db.Medios.findOne({ 'Número_medio': 5 }, { '_id': 1 } )
-Medio5['_id']
 Medio5['_id'].toString
 Medio5 = ""+Medio5['_id']
 
 Medio6 = db.Medios.findOne({ 'Número_medio': 6 }, { '_id': 1 } )
-Medio6['_id']
 Medio6['_id'].toString
 Medio6 = ""+Medio6['_id']
 
 Medio7 = db.Medios.findOne({ 'Número_medio': 7 }, { '_id': 1 } )
-Medio7['_id']
 Medio7['_id'].toString
 Medio7 = ""+Medio7['_id']
 
 Medio8 = db.Medios.findOne({ 'Número_medio': 8 }, { '_id': 1 } )
-Medio8['_id']
 Medio8['_id'].toString
 Medio8 = ""+Medio8['_id']
 
 Medio9 = db.Medios.findOne({ 'Número_medio': 9 }, { '_id': 1 } )
-Medio9['_id']
 Medio9['_id'].toString
 Medio9 = ""+Medio9['_id']
 
@@ -1402,12 +1393,10 @@ Medio11['_id'].toString
 Medio11 = ""+Medio11['_id']
 
 Medio12 = db.Medios.findOne({ 'Número_medio': 12 }, { '_id': 1 } )
-Medio12['_id']
 Medio12['_id'].toString
 Medio12 = ""+Medio12['_id']
 
 Medio13 = db.Medios.findOne({ 'Número_medio': 13 }, { '_id': 1 } )
-Medio13['_id']
 Medio13['_id'].toString
 Medio13 = ""+Medio13['_id']
 
@@ -1417,107 +1406,86 @@ Medio14['_id'].toString
 Medio14 = ""+Medio14['_id']
 
 Medio15 = db.Medios.findOne({ 'Número_medio': 15 }, { '_id': 1 } )
-Medio15['_id']
 Medio15['_id'].toString
 Medio15 = ""+Medio15['_id']
 
 Medio16 = db.Medios.findOne({ 'Número_medio': 16 }, { '_id': 1 } )
-Medio16['_id']
 Medio16['_id'].toString
 Medio16 = ""+Medio16['_id']
 
 Crítico1 = db.Críticos.findOne({ 'Número_crítico': 1 }, { '_id': 1 } )
-Crítico1['_id']
 Crítico1['_id'].toString
 Crítico1= ""+Crítico1['_id']
 
 Crítico2 = db.Críticos.findOne({ 'Número_crítico': 2 }, { '_id': 1 } )
-Crítico2['_id']
 Crítico2['_id'].toString
 Crítico2 = ""+Crítico2['_id']
 
 Crítico3 = db.Críticos.findOne({ 'Número_crítico': 3 }, { '_id': 1 } )
-Crítico3['_id']
 Crítico3['_id'].toString
 Crítico3 = ""+Crítico3['_id']
 
 Crítico4 = db.Críticos.findOne({ 'Número_crítico': 4 }, { '_id': 1 } )
-Crítico4['_id']
 Crítico4['_id'].toString
 Crítico4 = ""+Crítico4['_id']
 
 Crítico5 = db.Críticos.findOne({ 'Número_crítico': 5 }, { '_id': 1 } )
-Crítico5['_id']
 Crítico5['_id'].toString
 Crítico5 = ""+Crítico5['_id']
 
 Crítico6 = db.Críticos.findOne({ 'Número_crítico': 6 }, { '_id': 1 } )
-Crítico6['_id']
 Crítico6['_id'].toString
 Crítico6 = ""+Crítico6['_id']
 
 Crítico7 = db.Críticos.findOne({ 'Número_crítico': 7 }, { '_id': 1 } )
-Crítico7['_id']
 Crítico7['_id'].toString
 Crítico7 = ""+Crítico7['_id']
 
 Crítico8 = db.Críticos.findOne({ 'Número_crítico': 8 }, { '_id': 1 } )
-Crítico8['_id']
 Crítico8['_id'].toString
 Crítico8 = ""+Crítico8['_id']
 
 Crítico9 = db.Críticos.findOne({ 'Número_crítico': 9 }, { '_id': 1 } )
-Crítico9['_id']
 Crítico9['_id'].toString
 Crítico9 = ""+Crítico9['_id']
 
 Crítico10 = db.Críticos.findOne({ 'Número_crítico': 10 }, { '_id': 1 } )
-Crítico10['_id']
 Crítico10['_id'].toString
 Crítico10= ""+Crítico10['_id']
 
 Crítico11 = db.Críticos.findOne({ 'Número_crítico': 11 }, { '_id': 1 } )
-Crítico11['_id']
 Crítico11['_id'].toString
 Crítico11= ""+Crítico11['_id']
 
 Crítico12 = db.Críticos.findOne({ 'Número_crítico': 12 }, { '_id': 1 } )
-Crítico12['_id']
 Crítico12['_id'].toString
 Crítico12= ""+Crítico12['_id']
 
 Crítico13 = db.Críticos.findOne({ 'Número_crítico': 13 }, { '_id': 1 } )
-Crítico13['_id']
 Crítico13['_id'].toString
 Crítico13= ""+Crítico13['_id']
 
 Crítico15 = db.Críticos.findOne({ 'Número_crítico': 15 }, { '_id': 1 } )
-Crítico15['_id']
 Crítico15['_id'].toString
 Crítico15= ""+Crítico15['_id']
 
 Crítico17 = db.Críticos.findOne({ 'Número_crítico': 17 }, { '_id': 1 } )
-Crítico17['_id']
 Crítico17['_id'].toString
 Crítico17= ""+Crítico17['_id']
 
 Crítica1= db.Críticas.findOne({ 'Número_crítica': 1 }, { '_id': 1 } )
-Crítica1['_id']
 Crítica1['_id'].toString
 Crítica1 = ""+Crítica1['_id']
 
 Crítica2= db.Críticas.findOne({ 'Número_crítica': 2 }, { '_id': 1 } )
-Crítica2['_id']
 Crítica2['_id'].toString
 Crítica2 = ""+Crítica2['_id']
 
 Crítica3= db.Críticas.findOne({ 'Número_crítica': 3 }, { '_id': 1 } )
-Crítica3['_id']
 Crítica3['_id'].toString
 Crítica3 = ""+Crítica3['_id']
 
 Crítica4= db.Críticas.findOne({ 'Número_crítica': 4 }, { '_id': 1 } )
-Crítica4['_id']
 Crítica4['_id'].toString
 Crítica4 = ""+Crítica4['_id']
 
@@ -1527,432 +1495,346 @@ Crítica5['_id'].toString
 Crítica5 = ""+Crítica5['_id']
 
 Crítica6= db.Críticas.findOne({ 'Número_crítica': 6 }, { '_id': 1 } )
-Crítica6['_id']
 Crítica6['_id'].toString
 Crítica6 = ""+Crítica6['_id']
 
 Crítica7= db.Críticas.findOne({ 'Número_crítica': 7 }, { '_id': 1 } )
-Crítica7['_id']
 Crítica7['_id'].toString
 Crítica7 = ""+Crítica7['_id']
 
 Crítica8= db.Críticas.findOne({ 'Número_crítica': 8 }, { '_id': 1 } )
-Crítica8['_id']
 Crítica8['_id'].toString
 Crítica8 = ""+Crítica8['_id']
 
 Crítica9= db.Críticas.findOne({ 'Número_crítica': 9 }, { '_id': 1 } )
-Crítica9['_id']
 Crítica9['_id'].toString
 Crítica9 = ""+Crítica9['_id']
 
 Crítica10= db.Críticas.findOne({ 'Número_crítica': 10 }, { '_id': 1 } )
-Crítica10['_id']
 Crítica10['_id'].toString
 Crítica10 = ""+Crítica10['_id']
 
 Crítica11= db.Críticas.findOne({ 'Número_crítica': 11 }, { '_id': 1 } )
-Crítica11['_id']
 Crítica11['_id'].toString
 Crítica11 = ""+Crítica11['_id']
 
 Crítica12= db.Críticas.findOne({ 'Número_crítica': 12 }, { '_id': 1 } )
-Crítica12['_id']
 Crítica12['_id'].toString
 Crítica12 = ""+Crítica12['_id']
 
 Crítica13= db.Críticas.findOne({ 'Número_crítica': 13 }, { '_id': 1 } )
-Crítica13['_id']
 Crítica13['_id'].toString
 Crítica13 = ""+Crítica13['_id']
 
 Crítica14= db.Críticas.findOne({ 'Número_crítica': 14 }, { '_id': 1 } )
-Crítica14['_id']
 Crítica14['_id'].toString
 Crítica14 = ""+Crítica14['_id']
 
 Crítica15= db.Críticas.findOne({ 'Número_crítica': 15 }, { '_id': 1 } )
-Crítica15['_id']
 Crítica15['_id'].toString
 Crítica15 = ""+Crítica15['_id']
 
 Crítica16= db.Críticas.findOne({ 'Número_crítica': 16 }, { '_id': 1 } )
-Crítica16['_id']
 Crítica16['_id'].toString
 Crítica16 = ""+Crítica16['_id']
 
 Crítica17= db.Críticas.findOne({ 'Número_crítica': 17 }, { '_id': 1 } )
-Crítica17['_id']
 Crítica17['_id'].toString
 Crítica17 = ""+Crítica17['_id']
 
 Crítica18= db.Críticas.findOne({ 'Número_crítica': 18 }, { '_id': 1 } )
-Crítica18['_id']
 Crítica18['_id'].toString
 Crítica18 = ""+Crítica18['_id']
 
 Crítica20= db.Críticas.findOne({ 'Número_crítica': 20 }, { '_id': 1 } )
-Crítica20['_id']
 Crítica20['_id'].toString
 Crítica20 = ""+Crítica20['_id']
 
 Crítica21= db.Críticas.findOne({ 'Número_crítica': 21 }, { '_id': 1 } )
-Crítica21['_id']
 Crítica21['_id'].toString
 Crítica21 = ""+Crítica21['_id']
 
 Crítica22= db.Críticas.findOne({ 'Número_crítica': 22 }, { '_id': 1 } )
-Crítica22['_id']
 Crítica22['_id'].toString
 Crítica22 = ""+Crítica22['_id']
 
 Crítica23= db.Críticas.findOne({ 'Número_crítica': 23 }, { '_id': 1 } )
-Crítica23['_id']
 Crítica23['_id'].toString
 Crítica23 = ""+Crítica23['_id']
 
 Crítica24= db.Críticas.findOne({ 'Número_crítica': 24 }, { '_id': 1 } )
-Crítica24['_id']
 Crítica24['_id'].toString
 Crítica24 = ""+Crítica24['_id']
 
 Crítica25= db.Críticas.findOne({ 'Número_crítica': 25 }, { '_id': 1 } )
-Crítica25['_id']
 Crítica25['_id'].toString
 Crítica25 = ""+Crítica25['_id']
 
 Director1= db.Directores.findOne({ 'Número_director': 1 }, { '_id': 1 } )
-Director1['_id']
 Director1['_id'].toString
 Director1 = ""+Director1['_id']
 
 Director2= db.Directores.findOne({ 'Número_director': 2}, { '_id': 1 } )
-Director2['_id']
 Director2['_id'].toString
 Director2 = ""+Director2['_id']
 
 Director3= db.Directores.findOne({ 'Número_director': 3 }, { '_id': 1 } )
-Director3['_id']
 Director3['_id'].toString
 Director3 = ""+Director3['_id']
 
 Director4= db.Directores.findOne({ 'Número_director': 4 }, { '_id': 1 } )
-Director4['_id']
 Director4['_id'].toString
 Director4 = ""+Director4['_id']
 
 Director5= db.Directores.findOne({ 'Número_director': 5 }, { '_id': 1 } )
-Director5['_id']
 Director5['_id'].toString
 Director5 = ""+Director5['_id']
 
 Director6= db.Directores.findOne({ 'Número_director': 6 }, { '_id': 1 } )
-Director6['_id']
 Director6['_id'].toString
 Director6 = ""+Director6['_id']
 
 Director7= db.Directores.findOne({ 'Número_director': 7 }, { '_id': 1 } )
-Director7['_id']
 Director7['_id'].toString
 Director7 = ""+Director7['_id']
 
 Director8= db.Directores.findOne({ 'Número_director': 8 }, { '_id': 1 } )
-Director8['_id']
 Director8['_id'].toString
 Director8 = ""+Director8['_id']
 
 Director9= db.Directores.findOne({ 'Número_director': 9 }, { '_id': 1 } )
-Director9['_id']
 Director9['_id'].toString
 Director9 = ""+Director9['_id']
 
 Director10= db.Directores.findOne({ 'Número_director': 10 }, { '_id': 1 } )
-Director10['_id']
 Director10['_id'].toString
 Director10 = ""+Director10['_id']
 
 Director11= db.Directores.findOne({ 'Número_director': 11 }, { '_id': 1 } )
-Director11['_id']
 Director11['_id'].toString
 Director11 = ""+Director11['_id']
 
 Película1= db.Películas.findOne({ 'Número_película': 1 }, { '_id': 1 } )
-Película1['_id']
 Película1['_id'].toString
 Película1 = ""+Película1['_id']
 
 Película2= db.Películas.findOne({ 'Número_película': 2 }, { '_id': 1 } )
-Película2['_id']
 Película2['_id'].toString
 Película2 = ""+Película2['_id']
 
 Película3= db.Películas.findOne({ 'Número_película': 3 }, { '_id': 1 } )
-Película3['_id']
 Película3['_id'].toString
 Película3 = ""+Película3['_id']
 
 Película4= db.Películas.findOne({ 'Número_película': 4 }, { '_id': 1 } )
-Película4['_id']
 Película4['_id'].toString
 Película4 = ""+Película4['_id']
 
 Película5= db.Películas.findOne({ 'Número_película': 5 }, { '_id': 1 } )
-Película5['_id']
 Película5['_id'].toString
 Película5 = ""+Película5['_id']
 
 Película6= db.Películas.findOne({ 'Número_película': 6 }, { '_id': 1 } )
-Película6['_id']
 Película6['_id'].toString
 Película6 = ""+Película6['_id']
 
 Película7= db.Películas.findOne({ 'Número_película': 7 }, { '_id': 1 } )
-Película7['_id']
 Película7['_id'].toString
 Película7 = ""+Película7['_id']
 
 Película8= db.Películas.findOne({ 'Número_película': 8 }, { '_id': 1 } )
-Película8['_id']
 Película8['_id'].toString
 Película8 = ""+Película8['_id']
 
 Película9= db.Películas.findOne({ 'Número_película': 9 }, { '_id': 1 } )
-Película9['_id']
 Película9['_id'].toString
 Película9 = ""+Película9['_id']
 
 Película10= db.Películas.findOne({ 'Número_película': 10 }, { '_id': 1 } )
-Película10['_id']
 Película10['_id'].toString
 Película10 = ""+Película10['_id']
 
 Película11= db.Películas.findOne({ 'Número_película': 11 }, { '_id': 1 } )
-Película11['_id']
 Película11['_id'].toString
 Película11 = ""+Película11['_id']
 
 Película12= db.Películas.findOne({ 'Número_película': 12 }, { '_id': 1 } )
-Película12['_id']
 Película12['_id'].toString
 Película12 = ""+Película12['_id']
 
 Película13= db.Películas.findOne({ 'Número_película': 13 }, { '_id': 1 } )
-Película13['_id']
 Película13['_id'].toString
 Película13 = ""+Película13['_id']
 
 Película14= db.Películas.findOne({ 'Número_película': 14 }, { '_id': 1 } )
-Película14['_id']
 Película14['_id'].toString
 Película14 = ""+Película14['_id']
 
 Película15= db.Películas.findOne({ 'Número_película': 15 }, { '_id': 1 } )
-Película15['_id']
 Película15['_id'].toString
 Película15 = ""+Película15['_id']
 
 Género1= db.Géneros.findOne({ "Número_género": 1 }, { '_id': 1 } )
-Género1['_id']
 Género1['_id'].toString
 Género1 = ""+Género1['_id']
 
 Género2= db.Géneros.findOne({ "Número_género": 2 }, { '_id': 1 } )
-Género2['_id']
 Género2['_id'].toString
 Género2 = ""+Género2['_id']
 
 Género3= db.Géneros.findOne({ "Número_género": 3 }, { '_id': 1 } )
-Género3['_id']
 Género3['_id'].toString
 Género3 = ""+Género3['_id']
 
 Género4= db.Géneros.findOne({ "Número_género": 4 }, { '_id': 1 } )
-Género4['_id']
 Género4['_id'].toString
 Género4 = ""+Género4['_id']
 
 Género5= db.Géneros.findOne({ "Número_género": 5 }, { '_id': 1 } )
-Género5['_id']
 Género5['_id'].toString
 Género5 = ""+Género5['_id']
 
 Género6= db.Géneros.findOne({ "Número_género": 6 }, { '_id': 1 } )
-Género6['_id']
 Género6['_id'].toString
 Género6 = ""+Género6['_id']
 
 Género7= db.Géneros.findOne({ "Número_género": 7 }, { '_id': 1 } )
-Género7['_id']
 Género7['_id'].toString
 Género7 = ""+Género7['_id']
 
 Género8= db.Géneros.findOne({ "Número_género": 8 }, { '_id': 1 } )
-Género8['_id']
 Género8['_id'].toString
 Género8 = ""+Género8['_id']
 
 Género9= db.Géneros.findOne({ "Número_género": 9 }, { '_id': 1 } )
-Género9['_id']
 Género9['_id'].toString
 Género9 = ""+Género9['_id']
 
 Género10= db.Géneros.findOne({ "Número_género": 10 }, { '_id': 1 } )
-Género10['_id']
 Género10['_id'].toString
 Género10 = ""+Género10['_id']
 
 Actor1= db.Actores.findOne({ "Número_actor": 1 }, { '_id': 1 } )
-Actor1['_id']
 Actor1['_id'].toString
 Actor1 = ""+Actor1['_id']
 
 Actor2= db.Actores.findOne({ "Número_actor": 2 }, { '_id': 1 } )
-Actor2['_id']
 Actor2['_id'].toString
 Actor2 = ""+Actor2['_id']
 
 Actor3= db.Actores.findOne({ "Número_actor": 3 }, { '_id': 1 } )
-Actor3['_id']
 Actor3['_id'].toString
 Actor3 = ""+Actor3['_id']
 
 Actor4= db.Actores.findOne({ "Número_actor": 4 }, { '_id': 1 } )
-Actor4['_id']
 Actor4['_id'].toString
 Actor4 = ""+Actor4['_id']
 
 Actor5= db.Actores.findOne({ "Número_actor": 5 }, { '_id': 1 } )
-Actor5['_id']
 Actor5['_id'].toString
 Actor5 = ""+Actor5['_id']
 
 Actor6= db.Actores.findOne({ "Número_actor": 6 }, { '_id': 1 } )
-Actor6['_id']
 Actor6['_id'].toString
 Actor6 = ""+Actor6['_id']
 
 Actor7= db.Actores.findOne({ "Número_actor": 7 }, { '_id': 1 } )
-Actor7['_id']
 Actor7['_id'].toString
 Actor7 = ""+Actor7['_id']
 
 Actor8= db.Actores.findOne({ "Número_actor": 8 }, { '_id': 1 } )
-Actor8['_id']
 Actor8['_id'].toString
 Actor8 = ""+Actor8['_id']
 
 Actor9= db.Actores.findOne({ "Número_actor": 9 }, { '_id': 1 } )
-Actor9['_id']
 Actor9['_id'].toString
 Actor9 = ""+Actor9['_id']
 
 Actor10= db.Actores.findOne({ "Número_actor": 10 }, { '_id': 1 } )
-Actor10['_id']
 Actor10['_id'].toString
 Actor10 = ""+Actor10['_id']
 
 Actor11= db.Actores.findOne({ "Número_actor": 11 }, { '_id': 1 } )
-Actor11['_id']
 Actor11['_id'].toString
 Actor11 = ""+Actor11['_id']
 
 Actor12= db.Actores.findOne({ "Número_actor": 12 }, { '_id': 1 } )
-Actor12['_id']
 Actor12['_id'].toString
 Actor12 = ""+Actor12['_id']
 
 Actor13= db.Actores.findOne({ "Número_actor": 13 }, { '_id': 1 } )
-Actor13['_id']
 Actor13['_id'].toString
 Actor13 = ""+Actor13['_id']
 
 Actor14= db.Actores.findOne({ "Número_actor": 14 }, { '_id': 1 } )
-Actor14['_id']
 Actor14['_id'].toString
 Actor14 = ""+Actor14['_id']
 
 Actor15= db.Actores.findOne({ "Número_actor": 15 }, { '_id': 1 } )
-Actor15['_id']
 Actor15['_id'].toString
 Actor15 = ""+Actor15['_id']
 
 Actor16= db.Actores.findOne({ "Número_actor": 16 }, { '_id': 1 } )
-Actor16['_id']
 Actor16['_id'].toString
 Actor16 = ""+Actor16['_id']
 
 Actor17= db.Actores.findOne({ "Número_actor": 17 }, { '_id': 1 } )
-Actor17['_id']
 Actor17['_id'].toString
 Actor17 = ""+Actor17['_id']
 
 Actor18= db.Actores.findOne({ "Número_actor": 18 }, { '_id': 1 } )
-Actor18['_id']
 Actor18['_id'].toString
 Actor18 = ""+Actor18['_id']
 
 Actor19= db.Actores.findOne({ "Número_actor": 19 }, { '_id': 1 } )
-Actor19['_id']
 Actor19['_id'].toString
 Actor19 = ""+Actor19['_id']
 
 Actor20= db.Actores.findOne({ "Número_actor": 20 }, { '_id': 1 } )
-Actor20['_id']
 Actor20['_id'].toString
 Actor20 = ""+Actor20['_id']
 
 Actor21= db.Actores.findOne({ "Número_actor": 21 }, { '_id': 1 } )
-Actor21['_id']
 Actor21['_id'].toString
 Actor21 = ""+Actor21['_id']
 
 Actor22= db.Actores.findOne({ "Número_actor": 22 }, { '_id': 1 } )
-Actor22['_id']
 Actor22['_id'].toString
 Actor22 = ""+Actor22['_id']
 
 Actor23= db.Actores.findOne({ "Número_actor": 23 }, { '_id': 1 } )
-Actor23['_id']
 Actor23['_id'].toString
 Actor23 = ""+Actor23['_id']
 
 Actor24= db.Actores.findOne({ "Número_actor": 24 }, { '_id': 1 } )
-Actor24['_id']
 Actor24['_id'].toString
 Actor24 = ""+Actor24['_id']
 
 Actor25= db.Actores.findOne({ "Número_actor": 25 }, { '_id': 1 } )
-Actor25['_id']
 Actor25['_id'].toString
 Actor25 = ""+Actor25['_id']
 
 Actor26= db.Actores.findOne({ "Número_actor": 26 }, { '_id': 1 } )
-Actor26['_id']
 Actor26['_id'].toString
 Actor26 = ""+Actor26['_id']
 
 Cine1 = db.Cines.findOne({ 'Número_cine': 1 }, { '_id': 1 } )
-Cine1['_id']
 Cine1['_id'].toString
 Cine1 = ""+Cine1['_id']
 
 Cine2 = db.Cines.findOne({ 'Número_cine': 2 }, { '_id': 1 } )
-Cine2['_id']
 Cine2['_id'].toString
 Cine2 = ""+Cine2['_id']
 
 Cine3 = db.Cines.findOne({ 'Número_cine': 3 }, { '_id': 1 } )
-Cine3['_id']
 Cine3['_id'].toString
 Cine3 = ""+Cine3['_id']
 
 Cine4 = db.Cines.findOne({ 'Número_cine': 4 }, { '_id': 1 } )
-Cine4['_id']
 Cine4['_id'].toString
 Cine4 = ""+Cine4['_id']
 
 Cine5 = db.Cines.findOne({ 'Número_cine': 5 }, { '_id': 1 } )
-Cine5['_id']
 Cine5['_id'].toString
 Cine5 = ""+Cine5['_id']
 
@@ -2335,4 +2217,3 @@ db.Películas.updateOne( { "Número_película":3}, {$set:{"Secuela":ObjectId(Pel
 db.Películas.updateOne( { "Número_película":4}, {$set:{"Precuela":ObjectId(Película3)}})
 db.Películas.updateOne( { "Número_película":12}, {$set:{"Secuela":ObjectId(Película13)}})
 db.Películas.updateOne( { "Número_película":13}, {$set:{"Precuela":ObjectId(Película12)}})
-
