@@ -18,6 +18,7 @@ db.Préstamos.insertOne(
     		}]
   }
 )
+
 // Creamos entidad cliente
 db.Clientes.insertOne(
 {
@@ -26,6 +27,7 @@ db.Clientes.insertOne(
     	"Calle": "Inventada"
   }
 )
+
 //Ejemplo atributo compuesto
 // ObjectId('65f54f6bf42d2bce6ca68426')
 db.Clientes.insertOne(
@@ -42,17 +44,17 @@ db.Clientes.insertOne(
   		}
  }
 )
+
 // Ejemplo atrobuto multivaluado
 db.Clientes.insertOne(
 {
     	"Número": 143214,
 	"Nombre": "Henar",
-    	"Teléfono":{[
-    		983123456,
-    		983987654,
-    		689123456}
+    	"Teléfono":[{"1":983123456,
+    		     "2":983987654,
+    		     "3":689123456}]
   		}
- }
+ 
 )
 
 // Ejemplo Json squema
@@ -101,6 +103,7 @@ db.Tarjeta_Uva.insertOne(
 	"Tipo_tarjeta": "Identificativa"  	
  }
 )
+
 //Tarejeta incrustada en estudiante
 db.Estudiantes.insertOne(
 {
@@ -116,6 +119,7 @@ db.Estudiantes.insertOne(
     	}
  }
 )
+
 // Estudiante incrustado en tarjeta
 db.Tarejeta_Uva.insertOne(
 {
@@ -146,29 +150,33 @@ db.Estudiantes.insertOne(
     	}
  }
 )
+
 //Borramos la instancia de estudiante y de Tarjeta_uva para volver a introducirlas
 db.Estudiantes.deleteOne({ "Número_estudiante": 542531987} )
 db.Tarjeta_Uva.deleteOne( { "Número_tarjeta": "VA1133545"} )
 db.Estudiantes.insertOne( { "Número_estudiante": 542531987, "Nombre": "Miguel Ángel", "Curso": "Cuarto", "Centro": "ETSII" } )
 db.Tarjeta_Uva.insertOne( { "Número_tarjeta": "VA1133545", "Tipo_tarjeta": "Identificativa" } )
+
 //Calculamos el valor del ObjectId de la tarjeta
 Tarjeta_Uva1 = db.Tarjeta_Uva.findOne({ "Número_tarjeta": "VA1133545" }, { '_id': 1 } )
-Tarjeta_Uva1['_id']
 Tarjeta_Uva1['_id'].toString
 Tarjeta_Uva1 = ""+Tarjeta_Uva1['_id']
+
 //Referenciamos la tarjeta dentro de estudiantes
 db.Estudiantes.updateOne({"Número_estudiante": 542531987},{$set:{"Tarjeta_Uva":ObjectId(Tarjeta_Uva1)}})
+
 // Calculamos el valor del ObjectId de estudiante
 Estudiante1 = db.Estudiantes.findOne({ "Número_estudiante": 542531987 }, { '_id': 1 } )
-Estudiante1['_id']
 Estudiante1['_id'].toString
 Estudiante1 = ""+Estudiante1['_id']
 db.Tarjeta_Uva.updateOne({"Número_tarjeta": "VA1133545"},{$set:{"Estudiante":ObjectId(Estudiante1)}})
 
 //RELACIONES UNO A MUCHOS
+
 // Creamos las colecciones
 db.createCollection("Grados")
 db.createCollection("Asignaturas")
+
 //Añadimos instancias grado
 db.Grados.insertOne(
 {
@@ -176,6 +184,7 @@ db.Grados.insertOne(
 	"Nombre_grado": "Grado en ingeniería informática"
  }
 )
+
 //Añadimos instancias Asignaturas
 db.Asignaturas.insertOne(
 {
@@ -186,6 +195,7 @@ db.Asignaturas.insertOne(
     	"Periodo":"1C" 
  }
 )
+
 db.Asignaturas.insertOne(
 {
     	"Código_asignatura": 46901,
@@ -195,6 +205,7 @@ db.Asignaturas.insertOne(
     	"Periodo":"1C" 
  }
 )
+
 db.Asignaturas.insertOne(
 {
     	"Código_asignatura": 46977,
@@ -204,6 +215,7 @@ db.Asignaturas.insertOne(
     	"Periodo":"2C" 
  }
 )
+
 //Incrustamos
 db.Grados.updateOne({"Código_grado": 123456},{$set:{"Asignaturas":[
 	{
@@ -228,8 +240,10 @@ db.Grados.updateOne({"Código_grado": 123456},{$set:{"Asignaturas":[
     	"Tipo": "Obligatoria",
     	"Periodo":"2C" 
 	}]}})
+	
 // Borramos la instancia para posteriormente referenciar
 db.Grados.deleteOne({ "Código_grado": 123456} )
+
 // Volvemos a añadirle
 db.Grados.insertOne(
 {
@@ -237,21 +251,16 @@ db.Grados.insertOne(
 	"Nombre_grado": "Grado en ingeniería informática"
  }
 )
+
 //Referenciamos
 //Obtenemos los ObjectID de las asignaturas
 Asignatura1 = db.Asignaturas.findOne({ "Código_asignatura": 46962 }, { '_id': 1 } )
-Asignatura1['_id']
-Asignatura1['_id'].toString
 Asignatura1 = ""+Asignatura1['_id']
 
 Asignatura2 = db.Asignaturas.findOne({ "Código_asignatura": 46901 }, { '_id': 1 } )
-Asignatura2['_id']
-Asignatura2['_id'].toString
 Asignatura2 = ""+Asignatura2['_id']
 
 Asignatura3 = db.Asignaturas.findOne({ "Código_asignatura": 46962 }, { '_id': 1 } )
-Asignatura3['_id']
-Asignatura3['_id'].toString
 Asignatura3 = ""+Asignatura3['_id']
 
 //Añadimos las referencias a Grado
@@ -259,8 +268,6 @@ db.Grados.updateOne({"Código_grado": 123456},{$set:{"Asignaturas":[ObjectId(Asi
 
 // Obtenemos los ObjectID del grado
 Grado1 = db.Grados.findOne({ "Código_grado": 123456 }, { '_id': 1 } )
-Grado1['_id']
-Grado1['_id'].toString
 Grado1 = ""+Grado1['_id']
 
 //Referenciamos en asifnaturas
@@ -270,6 +277,7 @@ db.Asignaturas.updateOne({"Código_asignatura": 46977},{$set:{"Grados":ObjectId(
 
 
 // RELACIONES MUCHOS A MUCHOS
+
 db.createCollection("Profesores")
 // Asignatura ya creada
 // Añadimos instancias de profesores
@@ -297,6 +305,7 @@ db.Profesores.insertOne(
     	"Teléfono":983333333
  }
 )
+
 // Incrustamos las asignaturas en profesores
 db.Profesores.updateOne({"Número_profesor": 159261},{$set:{"Asignaturas":[
 	{
@@ -359,19 +368,17 @@ db.Profesores.updateOne({"Número_profesor": 159263},{$set:{"Asignaturas":[
 
 // Obtenemos los ObjectId de profesores
 Profesor1 = db.Profesores.findOne({ "Número_profesor": 159261 }, { '_id': 1 } )
-Profesor1['_id']
 Profesor1['_id'].toString
 Profesor1 = ""+Profesor1['_id']
 
 Profesor2 = db.Profesores.findOne({ "Número_profesor": 159262 }, { '_id': 1 } )
-Profesor2['_id']
 Profesor2['_id'].toString
 Profesor2 = ""+Profesor2['_id']
 
 Profesor3 = db.Profesores.findOne({ "Número_profesor": 159263 }, { '_id': 1 } )
-Profesor3['_id']
 Profesor3['_id'].toString
 Profesor3 = ""+Profesor3['_id']
+
 //Referenciamos los profesores 
 db.Profesores.updateOne({"Número_profesor": 159261},{$set:{"Asignaturas":[ObjectId(Asignatura1),ObjectId(Asignatura2),ObjectId(Asignatura3)]}})
 db.Profesores.updateOne({"Número_profesor": 159262},{$set:{"Asignaturas":[ObjectId(Asignatura1),ObjectId(Asignatura3)]}})
@@ -382,6 +389,7 @@ db.Asignaturas.updateOne({"Código_asignatura": 46901},{$set:{"Profesores":[Obje
 db.Asignaturas.updateOne({"Código_asignatura": 46977},{$set:{"Profesores":[ObjectId(Profesor1),ObjectId(Profesor2),,ObjectId(Profesor3)]}})
 
 // JERARQUÍA ISA
+
 // Borramos las instancias anteriormente creadas
 db.Estudiantes.drop()
 // Solución 1
@@ -409,7 +417,7 @@ db.Estudiantes.insertOne(
     	"Título_TFM":"Método de transformación de una base de datos con MongoDB",
  }
 )
-// Sulución 2
+// Solución 2
 db.createCollection("Estudiantes_grado")
 db.createCollection("Estudiantes_máster")
 db.Estudiantes_grado.insertOne(
@@ -454,12 +462,10 @@ db.Estudiantes.insertOne(
 )
 //Obtenemos los Ids
 Estudiante1 = db.Estudiantes.findOne({ "Número_estudiante": 123456 }, { '_id': 1 } )
-Estudiante1['_id']
 Estudiante1['_id'].toString
 Estudiante1 = ""+Estudiante1['_id']
 
 Estudiante2 = db.Estudiantes.findOne({ "Número_estudiante": 123457 }, { '_id': 1 } )
-Estudiante2['_id']
 Estudiante2['_id'].toString
 Estudiante2 = ""+Estudiante2['_id']
 
@@ -480,14 +486,17 @@ db.Estudiantes_máster.insertOne(
 )
 
 // ENTIDADES ASOCIATIVAS
+
 // Borramos las colecciones
 db.Estudiantes.drop()
 db.Estudiantes_grado.drop()
 db.Estudiantes_máster.drop()
+
 // Las creamos
 db.createCollection("Estudiantes")
 db.createCollection("Carreras")
 db.createCollection("Títulos")
+
 //Añadimos las instancias de estudiantes
 db.Estudiantes.insertOne(
 {
@@ -534,33 +543,27 @@ db.Carreras.insertOne(
 )
 // Obtenemos los IDs de estudiantes
 Estudiante1 = db.Estudiantes.findOne({ "Número_estudiante": 321261 }, { '_id': 1 } )
-Estudiante1['_id']
 Estudiante1['_id'].toString
 Estudiante1 = ""+Estudiante1['_id']
 
 Estudiante2 = db.Estudiantes.findOne({ "Número_estudiante": 321262 }, { '_id': 1 } )
-Estudiante2['_id']
 Estudiante2['_id'].toString
 Estudiante2 = ""+Estudiante2['_id']
 
 Estudiante3 = db.Estudiantes.findOne({ "Número_estudiante": 321263 }, { '_id': 1 } )
-Estudiante3['_id']
-Estudiante2['_id'].toString
+Estudiante3['_id'].toString
 Estudiante3 = ""+Estudiante3['_id']
 
 // Obtenemos los IDs de carreras
 Carrera1 = db.Carreras.findOne({ "Número_carrera": 159687 }, { '_id': 1 } )
-Carrera1['_id']
 Carrera1['_id'].toString
 Carrera1 = ""+Carrera1['_id']
 
 Carrera2 = db.Carreras.findOne({ "Número_carrera": 159345 }, { '_id': 1 } )
-Carrera2['_id']
 Carrera2['_id'].toString
 Carrera2 = ""+Carrera2['_id']
 
 Carrera3 = db.Carreras.findOne({ "Número_carrera": 159276 }, { '_id': 1 } )
-Carrera3['_id']
 Carrera3['_id'].toString
 Carrera3 = ""+Carrera3['_id']
 
@@ -591,22 +594,18 @@ db.Títulos.insertOne(
 )
 // Obtenemos los IDs de títulos
 Título21 = db.Títulos.findOne({ "Número_título": 21 }, { '_id': 1 } )
-Título21['_id']
 Título21['_id'].toString
 Título21 = ""+Título21['_id']
 
 Título22 = db.Títulos.findOne({ "Número_título": 22 }, { '_id': 1 } )
-Título22['_id']
 Título22['_id'].toString
 Título22 = ""+Título22['_id']
 
 Título23 = db.Títulos.findOne({ "Número_título": 23 }, { '_id': 1 } )
-Título23['_id']
 Título23['_id'].toString
 Título23 = ""+Título23['_id']
 
 Título24 = db.Títulos.findOne({ "Número_título": 24 }, { '_id': 1 } )
-Título24['_id']
 Título24['_id'].toString
 Título24 = ""+Título24['_id']
 
@@ -629,6 +628,7 @@ db.Estudiantes.updateOne({"Número_estudiante": 321262},{$set:{"Título":ObjectI
 db.Estudiantes.updateOne({"Número_estudiante": 321263},{$set:{"Título":ObjectId(Título23)}})
 
 // RELACIONES RECURSIVAS
+
 db.Estudiantes.drop()
 db.createCollection("Estudiantes")
 db.Estudiantes.insertOne(
@@ -648,12 +648,10 @@ db.Estudiantes.insertOne(
 )
 //Obtenemos los Object IDS de estudiantes
 Estudiante1 = db.Estudiantes.findOne({ "Número_estudiante": 321261 }, { '_id': 1 } )
-Estudiante1['_id']
 Estudiante1['_id'].toString
 Estudiante1 = ""+Estudiante1['_id']
 
 Estudiante2 = db.Estudiantes.findOne({ "Número_estudiante": 321262 }, { '_id': 1 } )
-Estudiante2['_id']
 Estudiante2['_id'].toString
 Estudiante2 = ""+Estudiante2['_id']
 
