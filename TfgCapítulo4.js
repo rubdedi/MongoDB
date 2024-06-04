@@ -50,9 +50,9 @@ db.Clientes.insertOne(
 {
     	"Número": 143214,
 	"Nombre": "Henar",
-    	"Teléfono":[{"1":983123456,
-    		     "2":983987654,
-    		     "3":689123456}]
+    	"Teléfono":[{"Teléfono1":983123456,
+    		     "Teléfono2":983987654,
+    		     "Télefono3":689123456}]
   		}
  
 )
